@@ -5,7 +5,11 @@
     example: Union([4,8,9,-5],[5,6,9,2,3]) => union:[4,5,6,8,-5,5,6,2,3],intersection:[9]
  */
 
-
-const Union = (tabA,tabB) => {
-    // Ecrivez votre code ici
+const Union = (tabA, tabB) => {
+  // Ecrivez votre code ici
+  let intersection = [];
+  for (let n of tabA) {
+    if (tabB.includes(n) && !intersection.includes(n)) intersection.push(n);
+  }
+  return { union: [...tabA, ...tabB], intersection };
 };

@@ -9,7 +9,14 @@
            * * * * * *
  */
 
-
 const Triangle = () => {
-    // Ecrivez votre code ici
+  // Ecrivez votre code ici
+  let t = "";
+  for (let i = 1; i < 7; i++) {
+    t += "* ".repeat(i) + "\n";
+  }
+
+  return t;
 };
+
+console.log(Triangle());

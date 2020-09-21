@@ -3,7 +3,6 @@
     Exemple: DecToBin(5) => 00000101
  */
 
-
 const DecToBin = (Number) => {
-    // Ecrivez votre code ici
+  // Ecrivez votre code ici
 };

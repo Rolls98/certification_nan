@@ -3,7 +3,14 @@
 
 // exemple: includesString('salut','bonjour') => ['u'], includesString('maman','moniqua') => ['m','a','n']
 
+const includesString = (chaineA, cchaineB) => {
+  let lst = [];
+  for (let l of chaineA) {
+    if (cchaineB.includes(l) && !lst.includes(l)) lst.push(l);
+  }
 
-const includesString = (chaineA,cchaineB) => {
-    // écrivez votre code ici
+  return lst;
+  // écrivez votre code ici
 };
+
+console.log(includesString("maman", "moniqua"));

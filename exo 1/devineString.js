@@ -9,7 +9,30 @@
 
  */
 
-
 const devineString = (chaine) => {
-    // Ecrivez votre code ici
+  let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  let dstr = [];
+  let som = 0;
+  for (let i = 0; i < chaine.length; i++) {
+    som += parseInt(alphabet.indexOf(chaine[i])) + 1;
+  }
+  //premiere verification
+  if (som > 0 && som < 26) {
+    if (!chaine.includes(alphabet[som])) {
+      dstr.push(alphabet[som - 1]);
+    }
+  }
+
+  for (let al of alphabet) {
+    let rst = som - (alphabet.indexOf(al) + 1);
+    if (rst > 0 && som > rst) {
+      dstr.push(al + alphabet[rst - 1]);
+    }
+  }
+
+  return dstr.slice(0, 2);
+
+  // Ecrivez votre code ici
 };
+
+console.log(devineString("ab"));

@@ -7,7 +7,16 @@
             * * * *
  */
 
-
 const Pyramide = () => {
-    // Ecrivez votre code ici
+  let p = "";
+  let sp = 3;
+  // Ecrivez votre code ici
+  for (let y = 1; y < 5; y++) {
+    p += " ".repeat(sp) + "* ".repeat(y) + "\n";
+    sp -= 1;
+  }
+
+  return p;
 };
+
+console.log(Pyramide());

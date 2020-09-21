@@ -4,7 +4,7 @@
 
  */
 
-
 const BinToDec = (Number) => {
-    // Ecrivez votre code ici
+  // Ecrivez votre code ici
+  return parseInt(Number, 2);
 };

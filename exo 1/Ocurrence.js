@@ -5,7 +5,10 @@
     exm: Ocurrence("salut","salutation") => "*ation"
  */
 
-
-const Ocurrence = (numb1,numb2) => {
-    // Ecrivez votre code ici4
+const Ocurrence = (numb1, numb2) => {
+  // Ecrivez votre code ici4
+  let rg = new RegExp(numb1, "g");
+  return numb2.replace(rg, "*");
 };
+
+console.log(Ocurrence("salut", "salutation"));
